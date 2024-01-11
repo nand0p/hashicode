@@ -14,6 +14,13 @@ module.exports.handler = async (event) => {
   resp += '<h5>HashiCorp Terraform<br>AWS Serverless Lambda/APIGateway<br>';
   resp += '<a href=https://github.com/nand0p/hashicode>https://github.com/nand0p/hashicode</a><p><br><p>';
   resp += JSON.stringify(event.headers);
+  resp += JSON.stringify(event.multiValueHeaders);
+  resp += JSON.stringify(event.queryStringParameters);
+  resp += JSON.stringify(event.multiValueQueryStringParameters);
+
+  // SECURITY: dont leak aws account number
+  delete event.requestContext.accountId;
+  resp += JSON.stringify(event.requestContext);
 
   return {
     statusCode: 200,
