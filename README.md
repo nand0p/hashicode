@@ -1,20 +1,27 @@
 
-#HashiCODE BCN
+# HashiCODE BCN
 
-##HashiCorp DevOps Consultancy.
+## HashiCorp DevOps Consultancy.
+## On-Site Barcelona.
 
-### On-Site Barcelona.
+- Terraform Infrastructure as Code. (DRY Module Support).
 
-Terraform Infrastructure as Code. (DRY Module Support).
+- Consul/Nomad Docker Container Clusters. (Faster/Simpler Kubernetes).
 
-Consul/Nomad Docker Container Clusters. (Faster/Simpler Kubernetes).
+- Vault Secrets Engine. (Zero Trust and Secrets Rotation).
 
-CI/CD Git Pipelines and Branch Theory. (Automate Everything).
+- CI/CD Git Pipelines and Branch Theory. (Automate Everything).
 
-Distributed Deep Learning with Nomad Clusters. (TensorFlow).
+- Distributed Deep Learning with Nomad Clusters. (TensorFlow).
 
-Full Lifecycle Support for all HashiCorp Infrastructure.
+- Vagrant Declarative Developer Environments. (Standardized DevEnvs).
 
-Jira KanBan Scrum Project Management Best Practices.
+- Full Lifecycle Support for all HashiCorp Infrastructure.
 
-CONTACT: HashiCODE @ hex7 . com
+- Multi-Cloud Configurations and Disaster Recovery Planning.
+
+- Jira KanBan Scrum Project Management Best Practices.
+
+
+## CONTACT: HashiCODE at hex7 . com
+~                                      
