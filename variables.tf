@@ -1,16 +1,12 @@
-variable "aws_region" {
-  description = "AWS region for all resources."
-  type        = string
-
-  # france 
-  default     = "eu-west-3"
-
-  # spain 
-  #default     = "eu-south-2"
+variable "bucket" {
+  type    = string
+  default = "hashicode.hex7.com"
 }
 
-variable "product" {
-  description = "Product Name"
-  type        = string
-  default     = "hashicode"
+variable "tags" {
+  type      = map
+  default   = {
+    owner   = "hex7"
+    product = "hashicode"
+  }
 }
