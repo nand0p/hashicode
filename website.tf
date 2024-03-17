@@ -79,6 +79,22 @@ resource "aws_s3_object" "hashicode" {
   content_language = "en-US"
   tags             = var.tags
 }
+resource "aws_s3_object" "hashicode_favicon" {
+  bucket           = aws_s3_bucket.hashicode.id
+  key              = "favicon.ico"
+  source           = "static/favicon.ico"
+  source_hash      = filemd5("static/favicon.ico")
+  acl              = "public-read"
+  tags             = var.tags
+}
+resource "aws_s3_object" "hashicode_robots" {
+  bucket           = aws_s3_bucket.hashicode.id
+  key              = "robots.txt"
+  source           = "static/robots.txt"
+  source_hash      = filemd5("static/robots.txt")
+  acl              = "public-read"
+  tags             = var.tags
+}
 
 
 output "hashicode_site_version" {
@@ -96,18 +112,6 @@ output "hashicode_s3_regional_domain" {
 
 output "hashicorp_s3_acl" {
   value = aws_s3_object.hashicode.acl
-}
-output "hashicorp_s3_crc32" { 
-  value = aws_s3_object.hashicode.checksum_crc32
-}
-output "hashicorp_s3_crc32c" { 
-  value = aws_s3_object.hashicode.checksum_crc32c
-}
-output "hashicorp_s3_sha1" { 
-  value = aws_s3_object.hashicode.checksum_sha1
-}
-output "hashicorp_s3_sha256" { 
-  value = aws_s3_object.hashicode.checksum_sha256
 }
 output "hashicorp_s3_etag" { 
   value = aws_s3_object.hashicode.etag
